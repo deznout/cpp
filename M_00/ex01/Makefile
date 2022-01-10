@@ -1,9 +1,9 @@
 CC = c++
 CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME = megaphone
+NAME = phonebook
 
-SRC = megaphone.cpp
+SRC = main.cpp
 DIR = ./objects/
 OBJS = $(addprefix $(DIR), $(SRC:.cpp=.o))
 
