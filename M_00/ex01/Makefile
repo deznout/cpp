@@ -3,7 +3,7 @@ CPPFLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = phonebook
 
-SRC = main.cpp
+SRC = main.cpp Contact.cpp PhoneBook.cpp
 DIR = ./objects/
 OBJS = $(addprefix $(DIR), $(SRC:.cpp=.o))
 
