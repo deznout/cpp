@@ -1,7 +1,8 @@
-#ifndef CPP_PHONEBOOK_H
-#define CPP_PHONEBOOK_H
+#ifndef CPP_PHONEBOOK_HPP
+#define CPP_PHONEBOOK_HPP
 
 # include "Contact.hpp"
+# include <cstdlib>
 
 class PhoneBook {
     private:
@@ -10,9 +11,7 @@ class PhoneBook {
         PhoneBook();
         ~PhoneBook();
         int adding_contact(int id);
-        //void print_contacts(int id);
         void search_contact();
-        //void full_info_out(int id);
 };
 
-#endif //CPP_PHONEBOOK_H
+#endif //CPP_PHONEBOOK_HPP

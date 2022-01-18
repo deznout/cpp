@@ -15,10 +15,9 @@ class Contact {
     public:
         Contact();
         ~Contact();
-        void    get_info();
+        bool    get_info();
         void    display_info(int id);
         void    print_all_info();
-        void    appear_head();
         bool    isMemberEmpty();
 };
 
