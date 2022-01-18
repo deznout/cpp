@@ -372,4 +372,8 @@ tags
 
 objs
 a.out
+<<<<<<< HEAD
 # End of https://www.toptal.com/developers/gitignore/api/c++,clion,jetbrains+all,vim,macos,linux,git,cmake,objective-c
+=======
+# End of https://www.toptal.com/developers/gitignore/api/c++,clion,jetbrains+all,vim,macos,linux,git,cmake,objective-c
+>>>>>>> a504f6886852b1108733538566f4644b4f4fa4fd
