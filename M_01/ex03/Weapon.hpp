@@ -10,9 +10,9 @@ class Weapon {
 
 	public:
 		Weapon();
-		Weapon(std::string name);
+		Weapon(const std::string &name);
 		std::string	getType() const;
-		void setType(std::string name);
+		void setType(const std::string &name);
 };
 
 #endif //M_01_WEAPON_HPP
