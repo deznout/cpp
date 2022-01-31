@@ -3,7 +3,11 @@
 
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
+private:
+	unsigned int	_hitPoints;
+	unsigned int	_atackDamage;
+	unsigned int	_energyPoints;
 public:
 	explicit FragTrap(const std::string& name);
 	FragTrap(const FragTrap &other);

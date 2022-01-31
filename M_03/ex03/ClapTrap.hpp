@@ -20,10 +20,13 @@ public:
 	ClapTrap& operator=(const ClapTrap &rhs);
 
 	//getters
-	std::string	getName();
-	unsigned int	getHP() const;
-	unsigned int	getEnergy() const;
-	unsigned int	getDamage() const;
+	virtual std::string	getName();
+
+	virtual unsigned int	getHP() const;
+
+	virtual unsigned int	getEnergy() const;
+
+	virtual unsigned int	getDamage() const;
 
 	//setters
 	void setName(const std::string& name);

@@ -22,6 +22,12 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
+	//getters
+	std::string		getName() const;
+	unsigned int	getHP() const;
+	unsigned int	getEnergy() const;
+	unsigned int	getDamage() const;
+
 	~ClapTrap();
 };
 

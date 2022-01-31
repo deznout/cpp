@@ -2,9 +2,9 @@
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name) {
 	std::cout << "ScavTrap " << this << " is initializing...\n";
-	setEnergy(50);
-	setHP(100);
-	setDamage(20);
+	this->_energyPoints = 50;
+	this->_hitPoints = 100;
+	this->_atackDamage = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &other) {

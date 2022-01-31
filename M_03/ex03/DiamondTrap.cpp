@@ -5,10 +5,10 @@ DiamondTrap::DiamondTrap(const std::string &name)
 	std::cout << "DiamondTrap " << this << " is initializing...\n";
 	_name = name;
 
-	ClapTrap::setName(name + "_clap_name");
-	setHP(FragTrap::_hitPoints);
-	setEnergy(ScavTrap::_energyPoints);
-	setDamage(FragTrap::_attackDamage);
+	setName(name + "_clap_name");
+	_hitPoints = FragTrap::getHP();
+	_energyPoints = ScavTrap::getEnergy();
+	_atackDamage = FragTrap::getDamage();
 }
 
 void DiamondTrap::attack(const std::string &target) {
@@ -23,4 +23,24 @@ void DiamondTrap::whoAmI() {
 
 DiamondTrap::~DiamondTrap() {
 	std::cout << "DiamondTrap's " << this << " destructor was called\n";
+}
+
+std::string DiamondTrap::getName()
+{
+	return _name;
+}
+
+unsigned int DiamondTrap::getHP() const
+{
+	return _hitPoints;
+}
+
+unsigned int DiamondTrap::getEnergy() const
+{
+	return _energyPoints;
+}
+
+unsigned int DiamondTrap::getDamage() const
+{
+	return _atackDamage;
 }

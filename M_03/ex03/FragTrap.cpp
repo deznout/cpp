@@ -2,9 +2,9 @@
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
 	std::cout << "FragTrap " << this << " is initializing...\n";
-	setEnergy(100);
-	setHP(100);
-	setDamage(30);
+	this->_hitPoints = 100;
+	this->_atackDamage = 30;
+	this->_energyPoints = 100;
 }
 
 FragTrap::FragTrap(const FragTrap &other) {

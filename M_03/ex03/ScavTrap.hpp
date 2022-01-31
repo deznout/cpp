@@ -3,7 +3,12 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
+private:
+	unsigned int	_hitPoints;
+	unsigned int	_atackDamage;
+	unsigned int	_energyPoints;
+
 public:
 	explicit ScavTrap(const std::string& name);
 	ScavTrap(const ScavTrap &other);
