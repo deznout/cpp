@@ -74,6 +74,16 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << _name << " doesn't have enough energy(\n";
 }
 
+//getters
+
+std::string	ClapTrap::getName() const { return _name; }
+
+unsigned int	ClapTrap::getHP() const { return _hitPoints; }
+
+unsigned int	ClapTrap::getEnergy() const { return _energyPoints; }
+
+unsigned int	ClapTrap::getDamage() const { return _atakDamage; }
+
 ClapTrap::~ClapTrap() {
 	std::cout << "ClapTrap's " << this << " destructor was called\n";
 }

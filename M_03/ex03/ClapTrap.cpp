@@ -4,13 +4,8 @@ ClapTrap::ClapTrap() {
 	std::cout << "ClapTrap's " << this << " default constructor was called\n";
 }
 
-ClapTrap::ClapTrap(const std::string& name)
-{
+ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
 	std::cout << "ClapTrap " << this << " is initializing...\n";
-	this->_name = name;
-	this->_energyPoints = 10;
-	this->_hitPoints = 10;
-	this->_atakDamage = 0;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
@@ -22,7 +17,7 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 ClapTrap& ClapTrap::operator=(const ClapTrap &rhs)
 {
 	std::cout << "Assignation operator called\n";
-	this->_atakDamage = rhs._atakDamage;
+	this->_attackDamage = rhs._attackDamage;
 	this->_hitPoints = rhs._hitPoints;
 	this->_name = rhs._name;
 	this->_energyPoints = rhs._energyPoints;
@@ -34,7 +29,7 @@ void ClapTrap::attack(const std::string &target)
 	if (_energyPoints > 0 && _hitPoints > 0)
 	{
 		std::cout << "ClapTrap " << this->_name << " attacks " << target <<
-		", causing " << this->_atakDamage << " points of damage!\n";
+		", causing " << this->_attackDamage << " points of damage!\n";
 		--_energyPoints;
 	}
 	else if (_hitPoints == 0)
@@ -74,10 +69,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << _name << " doesn't have enough energy(\n";
 }
 
-ClapTrap::~ClapTrap() {
-	std::cout << "ClapTrap's " << this << " destructor was called\n";
-}
-
 //getters
 
 std::string ClapTrap::getName() { return _name; }
@@ -86,7 +77,7 @@ unsigned int ClapTrap::getHP() const { return _hitPoints; }
 
 unsigned int ClapTrap::getEnergy() const { return _energyPoints; }
 
-unsigned int ClapTrap::getDamage() const { return _atakDamage; }
+unsigned int ClapTrap::getDamage() const { return _attackDamage; }
 
 //setters
 
@@ -96,4 +87,8 @@ void ClapTrap::setHP(unsigned int hp) { _hitPoints = hp; }
 
 void ClapTrap::setEnergy(unsigned int energy) { _energyPoints = energy; }
 
-void ClapTrap::setDamage(unsigned int damage) { _atakDamage = damage; }
+void ClapTrap::setDamage(unsigned int damage) { _attackDamage = damage; }
+
+ClapTrap::~ClapTrap() {
+    std::cout << "ClapTrap's " << this << " destructor was called\n";
+}

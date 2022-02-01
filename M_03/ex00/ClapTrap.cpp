@@ -1,7 +1,7 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
-	std::cout << "Default constructor was called\n";
+	std::cout << "Default constructor of " << this <<" was called\n";
 }
 
 ClapTrap::ClapTrap(const std::string& name)
@@ -74,6 +74,14 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << _name << " doesn't have enough energy(\n";
 }
 
+std::string	ClapTrap::getName() const { return _name; }
+
+unsigned int	ClapTrap::getHP() const { return _hitPoints; }
+
+unsigned int	ClapTrap::getEnergy() const { return _energyPoints; }
+
+unsigned int	ClapTrap::getDamage() const { return _atakDamage; }
+
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor was called\n";
+	std::cout << "Destructor of " << this << " was called\n";
 }

@@ -1,19 +1,16 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() {
+ClapTrap::ClapTrap() : _hitPoints(10), _energyPoints(10), _atakDamage(0) {
 	std::cout << "ClapTrap's " << this << " default constructor was called\n";
 }
 
-ClapTrap::ClapTrap(const std::string& name)
+ClapTrap::ClapTrap(const std::string& name) : _hitPoints(), _energyPoints(), _atakDamage()
 {
 	std::cout << "ClapTrap " << this << " is initializing...\n";
 	this->_name = name;
-	this->_energyPoints = 10;
-	this->_hitPoints = 10;
-	this->_atakDamage = 0;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &other)
+ClapTrap::ClapTrap(const ClapTrap &other) : _hitPoints(), _energyPoints(), _atakDamage()
 {
 	std::cout << "ClapTrap's " << this << " copy constructor was called\n";
 	*this = other;
@@ -73,6 +70,16 @@ void ClapTrap::beRepaired(unsigned int amount)
 	else
 		std::cout << _name << " doesn't have enough energy(\n";
 }
+
+//getters
+
+std::string	ClapTrap::getName() const { return _name; }
+
+unsigned int	ClapTrap::getHP() const { return _hitPoints; }
+
+unsigned int	ClapTrap::getEnergy() const { return _energyPoints; }
+
+unsigned int	ClapTrap::getDamage() const { return _atakDamage; }
 
 ClapTrap::~ClapTrap() {
 	std::cout << "ClapTrap's " << this << " destructor was called\n";

@@ -2,9 +2,9 @@
 
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name) {
 	std::cout << "FragTrap " << this << " is initializing...\n";
-	setEnergy(100);
-	setHP(100);
-	setDamage(30);
+	this->_hitPoints = 100;
+	this->_attackDamage = 30;
+	this->_energyPoints = 100;
 }
 
 FragTrap::FragTrap(const FragTrap &other) {
@@ -12,14 +12,10 @@ FragTrap::FragTrap(const FragTrap &other) {
 	*this = other;
 }
 
-void FragTrap::attack(const std::string &target) {
-	ClapTrap::attack(target);
-}
-
 void FragTrap::highFivesGuys() {
 	std::cout << "FragTrap requests a high fives.\n";
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "FragTrap's " << this << " destructor was called\n";
+    std::cout << "FragTrap's " << this << " destructor was called\n";
 }
